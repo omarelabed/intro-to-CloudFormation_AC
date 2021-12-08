@@ -63,8 +63,8 @@ Resources:
       GroupDescription: Open Port 80 for website
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
 Outputs:
   Website:
