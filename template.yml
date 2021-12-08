@@ -15,6 +15,9 @@ Resources:
       ImageId: ami-43874721 # Amazon Linux AMI in Sydney
       Tags:
         - Key: "Name"
-          Value: !Join [ " ", [ EC2, Instance, with, Fn, Join ] ]
+          Value: !Join 
+            - ""
+            - - "EC2 Instance for "
+              - !Ref AWS::Region
       SecurityGroupIds:
         - !GetAtt [MySecurityGroup, GroupId]
