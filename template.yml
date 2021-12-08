@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Just following the course on a cloud guru"
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-467ca739 # Amazon Linux AMI in N.Virginia
+      SubnetId: subnet-0c07d0b4579e99504
+      Tags:
+        - Key: Course
+          Value: IntroducingCloudFormation
+        - Key: Name
+          Value: !Join [" ", [ This, Is, A, Joined, String ]]
+        - Key: Exercise
+          Value: "Intrinsic Functions"
